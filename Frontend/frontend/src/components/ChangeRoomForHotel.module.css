@@ -1,0 +1,7 @@
+.changeRooms {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 4px;
+}

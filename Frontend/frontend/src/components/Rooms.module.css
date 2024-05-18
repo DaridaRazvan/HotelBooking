@@ -1,0 +1,8 @@
+.rooms {
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    color: black;
+    padding-left: 0px;
+}

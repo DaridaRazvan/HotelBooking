@@ -1,0 +1,17 @@
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.room {
+    gap: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}

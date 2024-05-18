@@ -1,0 +1,11 @@
+.hotel {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between
+}
+
+.name {
+    color: #1a1a1a;
+    font-weight: bold;
+}
