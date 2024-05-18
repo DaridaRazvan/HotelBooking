@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "adc4b1b2-71eb-4c4f-a4d3-b7c041b10deb",
+		"name": "Hotel App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18842026"
+	},
+	"item": [
+		{
+			"name": "All hotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hotel/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hotel",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Populate database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/populate_db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"populate_db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Populate database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Hotel Ramada\",\r\n    \"latitude\": 46.764654252624204,\r\n    \"longitude\": 23.598674125224626,\r\n    \"rooms\": [\r\n      {\r\n        \"roomNumber\": 210,\r\n        \"type\": 2,\r\n        \"price\": 200,\r\n        \"isAvailable\": true\r\n      },\r\n      {\r\n        \"roomNumber\": 125,\r\n        \"type\": 1,\r\n        \"price\": 350,\r\n        \"isAvailable\": true\r\n      },\r\n      {\r\n        \"roomNumber\": 87,\r\n        \"type\": 1,\r\n        \"price\": 300,\r\n        \"isAvailable\": false\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Grand Hotel Italia\",\r\n    \"latitude\": 46.7522792440665,\r\n    \"longitude\": 23.605990381045697,\r\n    \"rooms\": [\r\n      {\r\n        \"roomNumber\": 41,\r\n        \"type\": 3,\r\n        \"price\": 240,\r\n        \"isAvailable\": true\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"id\": 3,\r\n    \"name\": \"Hampton by Hilton\",\r\n    \"latitude\": 46.77539900854998,\r\n    \"longitude\": 23.60182699638966,\r\n\r\n    \"rooms\": [\r\n      {\r\n        \"roomNumber\": 32,\r\n        \"type\": 2,\r\n        \"price\": 410,\r\n        \"isAvailable\": false\r\n      },\r\n      {\r\n        \"roomNumber\": 21,\r\n        \"type\": 2,\r\n        \"price\": 350,\r\n        \"isAvailable\": true\r\n      },\r\n      {\r\n        \"roomNumber\": 64,\r\n        \"type\": 3,\r\n        \"price\": 300,\r\n        \"isAvailable\": true\r\n      }\r\n    ]\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/populate_db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"populate_db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotels In range",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\":  46.752054,\r\n    \"longitude\": 23.621297,\r\n    \"distanceInKm\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/hotel/inRange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hotel",
+						"inRange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Hotel By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hotel/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hotel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rooms for Hotel",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Reservations",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Remove reservation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"date\": \"2024-05-18T08:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change reservation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelId\": 3,\r\n    \"roomId\": 6,\r\n    \"reservationId\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservations/change",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservations",
+						"change"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
